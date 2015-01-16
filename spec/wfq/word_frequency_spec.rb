@@ -1,7 +1,7 @@
-require 'word_frequency'
+require 'wfq'
 
-describe WordFrequency do
-  let(:wf) { WordFrequency.new }
+describe Wfq::WordFrequency do
+  let(:wf) { Wfq::WordFrequency.new }
 
   describe '#read' do
     it 'converts a text file into a text string' do
