@@ -8,16 +8,12 @@ module Wfq
     end
 
     def clean(text)
-      text.downcase.gsub(/[\-\.\,\?\!]/, '')
+      text.downcase.gsub(/\W/, '')
     end
 
     def count(text)
       raise ArgumentError if text == ''
-      hash = {}
-      text.split(' ').each do |word|
-        hash[word].nil? ? hash[word] = 1 : hash[word] += 1
-      end
-      hash
+      text.split(' ').inject({}) { |sum, val| sum[val] = sum[val].to_i + 1; sum }
     end
 
     def print(hash)
