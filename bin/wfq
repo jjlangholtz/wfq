@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+
+require_relative '../lib/wfq'
+
+wf = Wfq::WordFrequency.new
+text = wf.read(ARGV[0])
+clean = wf.clean(text)
+hash = wf.count(clean)
+wf.print(hash)

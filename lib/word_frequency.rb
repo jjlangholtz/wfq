@@ -27,9 +27,3 @@ class WordFrequency
     end
   end
 end
-
-# wf = WordFrequency.new
-# text = wf.read(ARGV[0])
-# clean = wf.clean(text)
-# hash = wf.count(clean)
-# wf.print(hash)
